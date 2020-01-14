@@ -1,5 +1,6 @@
 Specifications for the Rails Assessment
 Specs:
+
  Using Ruby on Rails for the project
 
  Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes)
@@ -31,6 +32,7 @@ Specs:
  Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
+
  The application is pretty DRY
 
  Limited logic in controllers
