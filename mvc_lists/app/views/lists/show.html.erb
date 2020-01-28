@@ -15,7 +15,8 @@
             <li class="<%= "completed" if item.complete? %>">
                 <div class="view">
                     <%= form_for([@list, item]) do |f| %>
-                        <%= f.check_box :status %>
+                        <%= f.check_box :status {}, true, false %> 
+                        <%= f.submit %> 
                     <% end %>
 
                 <label><%= item.description %></label>
