@@ -3,8 +3,8 @@ class Item < ApplicationRecord
     validates :description, :presence => true
     
     STATUS = {
-        :incomplete => 0,
-        :complete => 1
+        :incomplete => false,
+        :complete => true
     }
 
     def complete?
