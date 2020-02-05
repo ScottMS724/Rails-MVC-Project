@@ -15,15 +15,15 @@
             <li class="<%= "completed" if item.complete? %>">
                 <div class="view">
                     <%= form_for([@list, item]) do |f| %>
-                        <%= f.check_box :status, {}, true, false %> 
-                        <%= f.submit %> 
+                        <%= f.hidden_field :status, value: !item.complete? %> 
+                        <%= f.submit item.complete? ? "Mark incomplete." : "Mark complete." %> 
                     <% end %>
 
                 <label><%= item.description %></label>
-            </div>
-        </li>
-        <% end %> 
-    </ul>
+                </div>
+            </li>
+            <% end %> 
+        </ul>
     </section>
     <footer class="footer">
 	</footer>
