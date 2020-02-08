@@ -12,16 +12,7 @@
         <label for="toggle-all">Mark all as complete</label>
         <ul class="todo-list">
             <% @list.items.each do |item| %>
-            <li class="<%= "completed" if item.complete? %>">
-                <div class="view">
-                    <%= form_for([@list, item]) do |f| %>
-                        <%= f.hidden_field :status, value: !item.complete? %> 
-                        <%= f.submit item.complete? ? "Mark incomplete." : "Mark complete." %> 
-                    <% end %>
-
-                <label><%= item.description %></label>
-                </div>
-            </li>
+                <%= render :partial => "items/item_li", :locals => {:item => item} %>
             <% end %> 
         </ul>
     </section>
