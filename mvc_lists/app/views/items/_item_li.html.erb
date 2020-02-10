@@ -3,8 +3,11 @@
         <%= form_for([@list, item]) do |f| %>
             <%= f.hidden_field :status, value: !item.complete? %> 
             <%= f.submit item.complete? ? "Mark incomplete." : "Mark complete." %> 
-<% end %>
+        <% end %>
 
         <label><%= item.description %></label>
+
+        <%= button_to "X", list_item_path(item.list, item), :method => "delete", :class => "destroy" %>
     </div>
 </li>
+

@@ -8,8 +8,6 @@
     </header>
     
     <section class="main">
-        <input class="toggle-all" type="checkbox">
-        <label for="toggle-all">Mark all as complete</label>
         <ul class="todo-list">
             <% @list.items.each do |item| %>
                 <%= render :partial => "items/item_li", :locals => {:item => item} %>
